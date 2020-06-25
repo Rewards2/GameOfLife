@@ -31,6 +31,7 @@ function draw() {
   background(220);
   grid.forEach(x => x.forEach(y => y.show()));
   if (!paused) step();
+  document.getElementById("afps").innerHTML = "Actual Fps: " + Math.floor(frameRate()*100)/100;
 }
 
 function step() {
