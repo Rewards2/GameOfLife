@@ -1,5 +1,8 @@
 alert(`Numbers & Up/Down Arrow keys to change the speed.\nSpacebar to pause the simulation.`);
 
+let k = prompt("Enter a whole number for pixel width.", 400);
+if (isNaN(Number.parseInt(k)) && k > 0) k = 400;
+
 let size = prompt("Enter a whole number for size of grid.", 10);
 if (isNaN(Number.parseInt(size)) && size > 0) size = 10;
 
@@ -9,7 +12,6 @@ if (isNaN(Number.parseInt(rand))) rand = Math.random();
 let grid = [];
 let paused = 0;
 let speed = 10;
-let k = 400;
 
 function setup() {
   createCanvas(k, k);
