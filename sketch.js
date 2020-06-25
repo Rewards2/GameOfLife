@@ -19,7 +19,7 @@ function setup() {
     grid.push([]);
     for (let y = 0; y < size; y++) {
       let r = Math.random() < rand ? 1 : 0;
-      grid[x].push(new Node(x * w, y * w, w, r));
+      grid[x].push(new Cell(x * w, y * w, w, r));
     }
   }
   frameRate(speed);
